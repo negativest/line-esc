@@ -302,6 +302,5 @@ const updateSessionFile = async(session) => {
   return (await DB.collection(COLLECTION_NAME).findOneAndUpdate({id: session.id}, {$set: {file: session.file}}, {returnOriginal: false})).value;
 }
 const deleteSession = async (sessionId) => {
-  return await DB.collection(COLLECTION_NAME).deleteMany();
-  /*return await DB.collection(COLLECTION_NAME).deleteOne({'id': sessionId});*/
+  return await DB.collection(COLLECTION_NAME).deleteOne({'id': sessionId});
 }
