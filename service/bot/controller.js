@@ -82,6 +82,9 @@ const onText = (instance, event) => {
     key: /Hello|hello/,
     message: 'Hi ' + event.origin.name + ',\nHow can I help you today?'
   }, {
+    key: /.*ESC.*/,
+    message: 'Embedded Service Channlesの略です\nDXを推進する1つのご提案となります'
+  }, {
     key: /.*パスワード.*/,
     message: 'こちらの情報はお役にたちますか？\nhttps://help.salesforce.com/articleView?id=user_password.htm&language=ja&type=0'
   }, {
